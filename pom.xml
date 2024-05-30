@@ -26,5 +26,12 @@
             <version>0.10.2</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Lukasz1x/site</url>
+        </repository>
+    </distributionManagement>
     
 </project>
