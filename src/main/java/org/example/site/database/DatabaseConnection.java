@@ -1,6 +1,5 @@
 package org.example.site.database;
 
-import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseConnection
 {
     private Connection connection;
-    private Connection getConnection()
+    public Connection getConnection()
     {
         return connection;
     }
@@ -24,7 +23,7 @@ public class DatabaseConnection
 
     public void disconnect() {
         try {
-            if(!(connection != null) && !connection.isClosed() ) {
+            if(connection != null && !connection.isClosed() ) {
                 connection.close();
             }
         } catch (SQLException e) {
